@@ -1,0 +1,47 @@
+plugins {
+	id 'org.springframework.boot' version '2.5.9'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+	id 'war'
+}
+
+group = 'info.moviepedia'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+//	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	// 얘가 있으면 HomeController에서 GET으로 index.jsp 맵핑이 안됨.
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	compileOnly 'org.projectlombok:lombok'
+	runtimeOnly 'com.h2database:h2'
+	annotationProcessor 'org.projectlombok:lombok'
+	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	//-mybatis 라이브러리 (기존 jdbc 라이브러리 필수)
+	implementation "org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.0"
+
+	//mariaDB
+	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
+
+	//*jsp 라이브러리
+	implementation 'javax.servlet:jstl'
+	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

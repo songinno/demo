@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="info.moviepedia.demo.member.repository.MemberMapper">
+    <!-- 회원등록 -->
+    <insert id="register">
+        INSERT INTO member (member_email, member_name, member_password)
+        VALUES (#{memberEmail}, #{memberName}, #{memberPassword})
+    </insert>
+
+    <!-- 회원삭제 -->
+    <delete id="delete">
+        DELETE FROM member WHERE member_email = #{memberEmail}
+    </delete>
+
+    <resultMap id="memberMap" type="info.moviepedia.demo.member.domain.Member">
+        <result column="member_email" property="memberEmail"/>
+        <result column="member_name" property="memberName"/>
+        <result column="member_password" property="memberPassword"/>
+        <result column="join_date" property="joinDate"/>
+    </resultMap>
+
+    <!-- 단일 회원 조회 -->
+    <select id="getOneMember" resultMap="memberMap">
+        SELECT * FROM member WHERE member_email = #{memberEmail}
+    </select>
+
+    <!-- 전체 회원 조회 -->
+    <select id="getMemberList" resultMap="memberMap">
+        SELECT * FROM member ORDER BY join_date
+    </select>
+
+</mapper>
