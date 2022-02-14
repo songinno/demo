@@ -1,11 +1,11 @@
-package info.moviepedia.demo.member.repository;
-
-import info.moviepedia.demo.member.domain.Member;
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-
-import java.util.List;
+//package info.moviepedia.demo.member.repository;
+//
+//import info.moviepedia.demo.member.domain.Member;
+//import org.junit.jupiter.api.Test;
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.boot.test.context.SpringBootTest;
+//
+//import java.util.List;
 
 
 //@SpringBootTest
