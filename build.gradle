@@ -1,5 +1,5 @@
 plugins {
-	id 'org.springframework.boot' version '2.5.9'
+	id 'org.springframework.boot' version '2.1.8.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
 	id 'war'
@@ -21,9 +21,8 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
-//	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
-	// 얘가 있으면 HomeController에서 GET으로 index.jsp 맵핑이 안됨.
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.junit.jupiter:junit-jupiter:5.7.0'
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'com.h2database:h2'
 	annotationProcessor 'org.projectlombok:lombok'
@@ -39,6 +38,12 @@ dependencies {
 	//*jsp 라이브러리
 	implementation 'javax.servlet:jstl'
 	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+
+	//devtools -> liveload (크롬에서 작동 오류남)
+	compileOnly('org.springframework.boot:spring-boot-devtools')
+
+
+
 
 }
 

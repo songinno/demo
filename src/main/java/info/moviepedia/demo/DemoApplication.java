@@ -18,6 +18,9 @@ public class DemoApplication {
 	}
 
 	public static void main(String[] args) {
+		//devtools livereload 설정 (안됨)
+//		System.setProperty("spring.devtools.restart.enabled", "false");
+//		System.setProperty("spring.devtools.livereload.enabled", "true");
 		SpringApplication.run(DemoApplication.class, args);
 	}
 

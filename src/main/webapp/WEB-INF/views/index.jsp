@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="wrap">
-        <h1> moviepedia입니다.</h1>
+        <h1> moviepedia입니다.  </h1>
     </div>
 </body>
 </html>
