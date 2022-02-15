@@ -19,7 +19,6 @@
         <result column="member_email" property="memberEmail"/>
         <result column="member_name" property="memberName"/>
         <result column="member_password" property="memberPassword"/>
-        <result column="join_date" property="joinDate"/>
     </resultMap>
 
     <!-- 단일 회원 조회 -->
@@ -29,7 +28,7 @@
 
     <!-- 전체 회원 조회 -->
     <select id="getMemberList" resultMap="memberMap">
-        SELECT * FROM member ORDER BY join_date
+        SELECT * FROM member ORDER BY joindate
     </select>
 
 </mapper>

@@ -15,10 +15,10 @@ public class DatabaseConfig {
     @Bean
     public DataSource dataSource() {
         HikariConfig config = new HikariConfig();
-        config.setJdbcUrl("jdbc:mariadb://localhost:3306/moviepedia?characterEncoding=UTF-8&serverTimezone=UTC");
+        config.setJdbcUrl("jdbc:mariadb://moviepedia.cq8fuclstaot.ap-northeast-2.rds.amazonaws.com:3306/moviepedia?characterEncoding=UTF-8&serverTimezone=UTC");
         config.setDriverClassName("org.mariadb.jdbc.Driver");
-        config.setUsername("root");
-        config.setPassword("1234");
+        config.setUsername("songinno");
+        config.setPassword("askl3114");
 
         return new HikariDataSource(config);
 
