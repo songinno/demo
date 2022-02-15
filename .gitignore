@@ -27,8 +27,9 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 
-#ignore all files in any directory named config
-config/
+#ignore all files in any directory named config (실패로, 주석처리함)
+#config/
+#application.properties
 
 ### NetBeans ###
 /nbproject/private/
