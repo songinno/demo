@@ -29,7 +29,6 @@ out/
 
 #ignore all files in any directory named config
 config/
-application.properties
 
 ### NetBeans ###
 /nbproject/private/
