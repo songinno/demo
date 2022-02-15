@@ -27,7 +27,8 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 
-!**/src/main/**/config/
+#ignore all files in any directory named config
+config/
 
 ### NetBeans ###
 /nbproject/private/
